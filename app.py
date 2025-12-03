@@ -480,7 +480,7 @@ def pca_page():
             if n_components >= 2:
                 if len(np.unique(y)) > 1:
                     color_scale = px.colors.qualitative.Set1
-                    colors = [color_scale[i % len(color_scale)] for i in y]
+                    colors = [color_scale[int(i) % len(color_scale)] for i in y]
                 else:
                     colors = '#3498db'
                 
